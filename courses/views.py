@@ -7,12 +7,12 @@ from rest_framework import status
 from django.http import Http404
 
 
-class SubjectsList(APIView):
+class SubjectsListAPI(APIView):
     '''LIST ALL SUBJECTS LIST'''
 
     def get(self, request, format=None):
-        subjects = Subjects.objects.all()
-        serializers = SubjectsSerializers(subjects, many=True)
+        subjects = Subjects.objects.all() #listing all subjects
+        serializers = SubjectsSerializers(subjects, many=True) 
         return Response(serializers.data)
 
     def post(self, request, format=None):
@@ -23,12 +23,12 @@ class SubjectsList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class SubjectsDetail(APIView):
+class SubjectsDetailAPI(APIView):
     '''RETRIVE UPDATE OR DELETE SUBJECT INSTANCE'''
 
     def get_object(self, pk):
         try:
-            return Subjects.objects.get(pk=pk)
+            return Subjects.objects.get(pk=pk) #return according to id provided
         except Subjects.DoesNotExist:
             raise Http404
 

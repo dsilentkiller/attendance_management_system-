@@ -1,0 +1,38 @@
+
+task1 => ID must be  visible in list 
+task2=> camelcase in variable nitanThapaIs
+
+validation : name validation (no especial character and number )
+password get => no password 
+
+#hashing and token research in django and python 
+
+#token expire hudaina (validation 1 year bhanda , 1 year nai huncha. )
+########################################data validation ##############
+##validation do in serializer.py 
+to make data validtaion 
+    1.field data validation
+
+    2.validator 
+
+    3.object level validation
+
+task 2  user authnetication 
+token research 
+1 .register 
+2.mail 
+3 password hashing
+
+
+#emil sent => otp => otp verify and athan only login
+
+#######################################JSON WEB TOKEN (JWT) ########################################################
+json web token => self expiry token
+    used by node ,laravel,django web framework for authentication 
+
+step 1. pip instal simple-JWT
+step 2 .restframework added 
+step3 to use custom authentication =>used refresh token 
+    go to manully custom token website => refresh token function , pass refresh token and object
+
+
